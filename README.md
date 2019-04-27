@@ -1,1 +1,4 @@
 # F_MarkdownCMS
+Markdown記法のみでサイトを更新出来るCMS
+
+まだ作成途中
