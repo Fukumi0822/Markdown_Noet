@@ -2,11 +2,6 @@
 class HttpRequest extends XMLHttpRequest {
 
 
-  static get Finished(){ return "load"; }
-  static get Progress(){ return "progress"; }
-  static get Error(){ return "error"; }
-  static get Cancel(){ return "abort"; }
-
   bool_Status;
 
 
