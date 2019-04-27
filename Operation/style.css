@@ -1,0 +1,156 @@
+body, html{
+  height: 100%;
+  
+}
+*{
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+/* サイド ナビゲーション
+============================================== */
+
+#navigation_bar{
+  background: #424242;
+  width: 5%;
+  height: 100%;
+  float: left;
+}
+
+#navigation_bar nav ul li img{
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+
+#content_select_bar{
+  background: #232323;
+  width: 25%;
+  height: 100%;
+  float: left;
+  overflow: scroll;
+}
+
+#content_select_bar h3{
+  color: #e8e8e8;
+  padding: 10px;
+  border-bottom: 1px #e8e8e8 solid;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+#content_select_bar .section{
+  background: #232323;
+  display: flex;
+  padding-bottom: 10px;
+}
+
+
+#content_select_bar .section button.s2column{
+  float: left;
+  width: calc(50% - 10px);
+  margin: 5px;
+  line-height: 30px;
+}
+
+#content_select_bar .section button.h2{
+  font-size: 0.8em;
+}
+
+#content_select_bar .section button.h3{
+  font-size: 0.8em;
+}
+
+#content_select_bar summary{
+  background: #2f3031;
+  line-height: 20px;
+}
+
+#content_select_bar summary img{
+  float: right;
+  right: 10px;
+  top: 2px;
+  position: relative;
+  width: 16px;
+}
+
+#content_select_bar details{
+  color: #e8e8e8;
+  padding: 5px 5px 5px 10px;
+}
+
+
+#content_select_bar details div{
+  margin: 10px;
+}
+
+#content_select_bar details div table{
+  width: 100%;
+}
+
+#content_select_bar details div table tr{
+  line-height: 25px;
+  border-bottom: 1px #3c3c3c solid;
+}
+
+
+
+
+/* メインコントロール
+============================================== */
+
+#main_control{
+  background: #e8e8e8;
+  width: 70%;
+  height: 100%;
+  float: left;
+  overflow: scroll;
+}
+
+#main_control h1{
+  background: #419dca;
+  line-height: 20px;
+  color: #edf3f7;
+  text-align: center;
+}
+
+#main_control #Toolbar{
+  height: 30px;
+}
+
+#main_control #Toolbar button{
+  height: 30px;
+}
+
+
+#main_control input[name="post_title"]{
+  width: calc(100% - 10px);
+  border-radius: 5px 5px 0px 0px;
+  border: 1px #000 solid;
+  padding: 5px;
+  font-size: 1.3em;
+  border-bottom: 0px;
+  font-family: arial,sans-serif;
+}
+
+#main_control textarea[name="post_data"]{
+  width: calc(100% - 10px);
+  border: 1px #000 solid;
+  padding: 5px;
+  border-radius: 0px 0px 5px 5px;
+  height: 500px;
+  font-size: 1em;
+  font-family: "Monaco", monospace, "Courier", "Inconsolata", "Bitstream Vera Sans Mono";
+}
+
+
+
+#main_control details input{
+  width: 100%;
+}
+
+#main_control details input[type="radio"]{
+  width: auto;
+}
+
+#main_control .tableInWidget{
+  display: none;
+}

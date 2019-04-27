@@ -1,0 +1,71 @@
+/* Element
+============================================== */
+button{
+  border-radius: 5px;
+  color: #419dca;
+  transition: .5s;
+}
+
+section{
+  padding: 20px;
+}
+
+
+/* Button
+============================================== */
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+button.h2{
+  background: #419dca;
+  color: #FFF;
+  border: 0px;
+}
+
+button.h3{
+  background: rgba(100%, 100%, 100%, 0);
+  border: 1px #419dca solid;
+}
+
+.groupbutton{
+  background: #fff;
+  display: inline-block;
+  border: 1px #419dca solid;
+  border-radius: 5px;
+}
+.groupbutton button{
+  display: block;
+  float: left;
+  border: 0px;
+  line-height: 0px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0px;
+}
+
+.groupbutton button img{
+  width: 24px;
+}
+
+.groupbutton button:hover{
+  background: #325b6f;
+}
+
+.groupbutton button:nth-child(n + 2){
+  border-left: 1px #419dca solid;
+}
+
+/* セクション and ボックス
+============================================== */
+
+.box{
+  background: #FFF;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+}

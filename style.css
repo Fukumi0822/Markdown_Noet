@@ -1,0 +1,140 @@
+
+html{
+  font-size: 100%;
+}
+
+body{
+  background: rgb(228, 228, 228);
+}
+
+
+/* Header Block
+========================================================================== */
+
+header{
+  background: rgb(48, 162, 255);
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+
+header #header{
+  width: 75%;
+  margin: 0 auto;
+}
+
+header #header h1{
+  float: left;
+  line-height: 50px;
+  font-size: 1.5em;
+  color: rgb(255, 246, 246);
+}
+
+
+
+header #header nav{
+  float: right;
+}
+
+header #header nav ul li{
+  line-height: 48px;
+  float: left;
+  margin-left: 20px;
+  border-bottom: 2px rgb(48, 162, 255) solid;
+}
+
+header #header nav ul li:hover{
+  border-bottom: 2px #6f6f6f solid;
+}
+
+header #header nav ul li a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+
+/* Content Block
+========================================================================== */
+
+#content{
+  width: 75%;
+  margin: 0 auto;
+}
+
+#content::after{
+  content: '';
+  display: block;
+  clear: left;
+}
+
+#content #post-block{
+  background: #FFF;
+  width: calc(65% - 20px);
+  float: left;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+#content #post-block #post-title{
+  font-size: 1.5em;
+  border-bottom: 1px #d6d6d6 solid;
+  margin: 20px 0px 20px 0px;
+  padding-bottom: 5px;
+}
+
+
+#content #side .box{
+  background: #FFF;
+  width: calc(30% - 20px);
+  float: right;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#post-index-List h3{
+  border-bottom: 1px #d6d6d6 solid;
+  margin: 10px 0px 10px 0px;
+  padding: 0px 0px 5px 5px;
+}
+
+#post-index-List nav ul li{
+  margin: 5px 0px 5px 0px;
+}
+#post-index-List nav ul li a{
+  color: rgb(105, 105, 105);
+  text-decoration: none;
+}
+#post-index-List nav ul li a:hover{
+  color: rgb(57, 143, 255);
+}
+
+/* footer
+========================================================================== */
+footer{
+  background: #3a3a3a;
+  color: #FFF;
+  width: calc(100% - 20px);
+  margin-top: 80px;
+  padding: 10px;
+}
+
+/* Class
+========================================================================== */
+
+#post-index-List .index_2{
+  margin-left: 10px;
+}
+
+#post-index-List .index_3{
+  margin-left: 20px;
+}
+
+#post-index-List .index_4{
+  margin-left: 30px;
+}
+
+#post-index-List .index_5{
+  margin-left: 40px;
+}
+

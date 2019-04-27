@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./class_style.css">
+  <script src="./httpRequest.js"></script>
+  <script src="./server_request.js"></script>
+  <script src="./editor.js"></script>
+  <script src="./script.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="navigation_bar">
+
+    <nav>
+      <ul>
+        <li><a href="#"><img src="./images/home.svg" alt="ホーム"></a></li>
+        <li><a href="#"><img src="./images/books.svg" alt="記事"></a></li>
+        <li><a href="#"><img src="./images/account.svg" alt="アカウント"></a></li>
+        <li><a href="#"><img src="./images/settings.svg" alt="設定"></a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <div id="content_select_bar">
+
+    <h3>Management Home</h3>
+    
+    <span class="section">
+        <button class="h2 s2column">新しい投稿</button>
+        <button class="h3 s2column">サイトを表示</button>
+    </span>
+
+    <details open>
+
+      <summary><img src="./images/baseline-new.svg" alt="アクティブ">アクティブ</summary>
+      <div>
+
+        <table>
+          <tr>
+            <td>新しい投稿を公開</td>
+            <td>詳細</td>
+          </tr>
+          <tr>
+            <td>ユーザー権限更新</td>
+            <td>詳細</td>
+          </tr>
+          <tr>
+            <td>新しい投稿を公開</td>
+            <td>詳細</td>
+          </tr>
+          <tr>
+            <td>投稿を編集</td>
+            <td>詳細</td>
+          </tr>
+          <tr>
+            <td>新しいコメント</td>
+            <td>詳細</td>
+          </tr>
+        </table>
+
+      </div>
+    </details>
+
+
+    <details>
+
+        <summary><img src="./images/help.svg" alt="ヘルプ">ヘルプ</summary>
+        <div>
+  
+          お困りの時はサポートやコミュニティを参照してください。
+  
+        </div>
+      </details>
+
+  </div>
+
+  <div id="main_control">
+    <h1>~ Editor ~</h1>
+    
+
+    <section>
+        
+
+            <div id="Toolbar" class="box">
+              <div class="left">
+                <div class="groupbutton">
+                    <button value="image" data-method="CodeInsertion"><img src="./images/editor/photo.svg" alt="画像挿入"></button>
+                    <button value="link" data-method="CodeInsertion"><img src="./images/editor/link.svg" alt="リンク挿入"></button>
+                    <button value="table" data-method="TableCode"><img src="./images/editor/table.svg" alt="テーブル挿入"></button>
+                    <button value="quote" data-method="CodeInsertion"><img src="./images/editor/quote.svg" alt="引用"></button>
+                </div>
+              </div>
+              <div class="right">
+                <button class="h2 article">公開</button>
+                <button class="h3 preview">プレビュー</button>
+                <button class="h3 save">保存</button>
+              </div>
+            </div>
+
+            <div class="box tableInWidget">
+              横 : <input type="number" min="0" value="1">
+              縦 : <input type="number" min="0" value="2">
+              <button class="h2">挿入</button>
+              
+              <div class="box">
+                  <details>
+    
+                      <summary>ヒント</summary>
+                      <div class="box">
+                        テーブル「:」を左右に配置する事で文字の寄りを変える事が出来ます<br>
+                        `|:----|`左寄り　`|----:|`右寄り
+                      </div>
+                  </details>
+              </div>
+
+            </div>
+
+            <form>
+
+            <div class="box">
+              <input type="text" name="post_title" placeholder="記事タイトル..." value="">
+              <textarea name="post_data" placeholder="#本文入力" value=""></textarea>
+            </div>
+
+            <div class="box">
+
+                <details open>
+
+                    <summary>投稿オプション</summary>
+                    
+                    <div class="box">
+                        <details>
+
+                            <summary>ラベル</summary>
+                            <div class="box">
+                      
+                                <input type="text" name="post_label" placeholder="ラベルをカンマ(,)で区切って入力" value="">
+                      
+                            </div>
+                        </details>
+    
+                          <details>
+    
+                              <summary>検索</summary>
+                              <div class="box">
+                        
+                                  <input type="text" name="post_seo_about" placeholder="記事のSEO用説明" value="">
+                        
+                              </div>
+                          </details>
+    
+                          <details>
+    
+                              <summary>コメント</summary>
+                              <div class="box">
+                                  コメント有無 : 
+                                <label><input type="radio" name="comment" value="true" checked>有効</label>
+                                <label><input type="radio" name="comment" value="false">無効</label>
+                        
+                              </div>
+                          </details>
+                    </div>
+
+
+                </details>
+
+                  
+
+            </div>
+      
+        </form>
+    </section>
+   
+
+  </div>
+
+</body>
+</html>
