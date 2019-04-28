@@ -3,7 +3,7 @@ class HttpRequest extends XMLHttpRequest {
 
 
   bool_Status;
-
+　
 
 
 
