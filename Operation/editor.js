@@ -1,8 +1,17 @@
 
 class Editor {
-  constructor(Selector) {
-    this._publicEditorElement       = document.querySelector(Selector);
+  constructor() {
+    
+    this._publicEditorElement       = document.getElementById("postText");
+    this._publicEditorTitle         = document.getElementById("postTitle");
+
+    // Tool buttons
     this._publicEditor_ToolButtons  = document.querySelectorAll("#Toolbar .left .groupbutton button");
+
+    // Request buttons
+    this._publicArticlePostButton = document.querySelector("#Toolbar div.right button.article");
+    this._publicPreviewPostButton = document.querySelector("#Toolbar div.right button.preview");
+    this._publicSavePostButton    = document.querySelector("#Toolbar div.right button.save");
 
     // add Table control
     this._publicEditor_TableAddControlContainer   = document.querySelector("div.tableInWidget");
@@ -10,10 +19,9 @@ class Editor {
     this._publicEditor_TableAddInputs             = document.querySelectorAll("div.tableInWidget input");
 
 
-    //ボタンのイベント登録
+    //ツールボタンのイベント登録
     let buttonElement = this._publicEditor_ToolButtons;
     for (let Object of buttonElement) {
-
       switch (Object.dataset.method) {
         case "CodeInsertion":
           //文字列挿入メソッド
@@ -28,11 +36,34 @@ class Editor {
           });
           break;
       } //--SWITCH END
-
     } //--FOR END
 
 
+    // リクエストボタンのイベント登録
+    this._publicArticlePostButton.addEventListener('click', this.clickEvent_ArticlePostButton.bind(this));
+    //this._publicPreviewPostButton.addEventListener('load', );
+    //this._publicSavePostButton.addEventListener('load', );
+
+
+
   }
+
+  clickEvent_ArticlePostButton(){
+    let request = new HttpRequest();
+    let postTitle = this._publicEditorTitle.value;
+    let postText = this._publicEditorElement.value;
+
+    
+
+    request.post('./test.php', { Title : postTitle, Text : postText }, (data, status)=>{
+      if(status){
+        console.log(data);
+      }
+    });
+    
+  
+  }
+
 
 
   /* -- カーソルの位置を取得する --
