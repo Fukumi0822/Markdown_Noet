@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./class.css">
+</head>
+<body>
+  
+  <editor>
+      <label>
+          <img src="./images/editor/title.svg" />
+          <input class="title" type="text" value="" placeholder="記事のタイトルを入力">
+      </label>
+      <toolbar>
+          <div>
+            <button><img src="./images/editor/bold.svg"></button>
+            <button><img src="./images/editor/italic.svg"></button>
+            <button><img src="./images/editor/clear.svg" alt=""></button>
+            <button><img src="./images/editor/title.svg" alt=""></button>
+            <button><img src="./images/editor/link.svg"></button>
+            <button><img src="./images/editor/photo.svg" alt=""></button>
+            <button><img src="./images/editor/quote.svg" alt=""></button>
+            <button><img src="./images/editor/code.svg" alt=""></button>
+            <button><img src="./images/editor/list.svg" alt=""></button>
+            <button><img src="./images/editor/table.svg" alt=""></button>
+          </div>
+
+          <div>
+            <button>タグ</button>
+            <button>SEO</button>
+            <button><img src="./images/editor/help.svg" alt=""></button>
+          </div>
+
+      
+          <div class="left">
+            <button>公開</button>
+            <button>保存</button>
+            <button>プレビュー</button>
+          </div>
+      </toolbar>
+      
+          <textarea class="source" value="" placeholder="投稿記事をMarkdown記法で記述してください。
+          
+またMarkdown記法以外にHTMLと混合させ記述も可能です。
+分からない事はヘルプを参照してください。"></textarea>
+
+    <modal-window  display="none">
+        <widget id="addImage">
+            <toolbar>
+              <div>
+                  <button>ファイル選択</button>
+                  <input type="file" name="example2" accept="image/*" style="display: none">
+              </div>
+              <div>
+                <button>Markdown</button>
+                <button>HTML</button>
+              </div>
+            </toolbar>
+            <textarea value="" placeholder="![Text](http://....)" style="height: 100px;"></textarea>
+
+
+            <Control>
+                <button>挿入</button>
+                <button>キャンセル</button>
+            </Control>
+        </widget>
+
+
+       <widget id="addTable">
+        <h3>表挿入</h3>
+        <div class="Horizontally">
+            <label class="column_2"><span>列</span><input type="text"></label>
+            <label class="column_2"><span>行</span><input type="text"></label>
+        </div>
+
+        <Control>
+            <button>挿入</button>
+            <button>キャンセル</button>
+        </Control>
+       </widget>
+    </modal-window>
+  </editor>
+
+
+
+</body>
+</html>

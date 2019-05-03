@@ -1,3 +1,3 @@
 <?php 
 
-if()
+print_r($_POST);

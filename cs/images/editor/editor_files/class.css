@@ -1,0 +1,220 @@
+html, body{ margin: 0px; padding: 0px; }
+html *, body *{
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+}
+
+h3{
+  font-size: 0.9em;
+  margin: 5px;
+}
+
+
+editor{
+  display: flex;
+  flex-direction: column;
+}
+
+editor label{
+  display: flex;
+  background: #FFF;
+  border-bottom: 1px #000 solid;
+}
+
+editor label:hover *, editor label:hover{
+  color: #375e90;
+  border-color: #4c88d6;
+}
+
+editor label.column_2{
+  width: 45%;
+  margin: 5%;
+}
+
+editor label span{
+  padding: 0px 5px;
+}
+
+editor label span::after{
+  content: ":";
+  margin-left: 5px;
+}
+
+editor label img{
+  border-right: 1px #dedede solid;
+  width: 30px;
+  padding: 0px 5px;
+}
+
+.Horizontally{
+  display: flex;
+  align-items: center;
+}
+
+/* editor > Toolbar
+ * <toolbar>
+ *  <div> <button>Content</button> </div>
+ * </toolbar>
+============================================== */
+
+editor toolbar{
+  margin: 10px 0px;
+  padding: 10px;
+  background: #FFF;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+editor toolbar div{
+  height: 30px;
+  border: 1px #7b7b7b solid;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 0px 3px;
+  margin: 0px 5px;
+}
+
+@media screen and (max-width:815px){
+  editor toolbar div.left{
+    margin-left: 0px;
+  }
+}
+
+editor toolbar div.left{
+  margin-left: auto;
+}
+editor toolbar div button{
+  background: #FFF;
+  display: block;
+  float: left;
+  border: 0px;
+  line-height: 30px;
+  padding: 1px 7px 1px 7px;
+  height: 100%;
+  display: flex;
+}
+editor toolbar div button:focus{
+  outline: 0;
+}
+editor toolbar div button:nth-child(n + 2){
+  border-left: 1px;
+  border-left: 1px #000 solid;
+}
+
+editor toolbar div::after{
+  content: "";
+  display: block;
+  clear: left;
+}
+
+editor toolbar div button img{
+  width: 24px;
+}
+
+/* editor > input and textarea
+ * <toolbar>
+ *  <div> <button>Content</button> </div>
+ * </toolbar>
+============================================== */
+
+editor input, textarea{
+  outline: 0;
+}
+
+/* input.title */
+editor input.title[type="text"]{
+  margin: 5px 0px;
+  padding: 0px 5px;
+  border: 0px;
+  width: calc(100% - 10px);
+  font-size: 2em;
+}
+
+
+
+/* textarea */
+
+editor textarea{
+  display: block;
+  font-size: 1em;
+  padding: 5px;
+  height: 300px;
+  font-family: Consolas,Courier New,Courier,Monaco,monospace;
+}
+
+
+/* editor > modal-window
+ * <modal-window>
+ *  <widget> Content </widget>
+ * </modal-window>
+============================================== */
+editor modal-window{
+  position: fixed;
+  background: #b9b9b9a1;
+  width: 100%;
+  height: 100%;
+}
+
+editor modal-window[display="none"] {
+  display: none;
+}
+
+/* 否定セレクタ  */
+editor modal-window:not([display="addImage"]) #addImage{
+  display: none;
+}
+editor modal-window:not([display="addTable"]) #addTable{
+  display: none;
+}
+
+
+editor modal-window widget{
+  background: #FFF;
+  width: 500px;
+  display: flex;
+  margin: 10px auto;
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+editor modal-window widget Control button{
+  float: right;
+  display: block;
+  margin: 30px 5px 10px 5px;
+  padding: 3px 7px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+editor modal-window widget Control button:focus{
+  outline: 0;
+}
+
+editor modal-window widget::after{
+  content: "";
+  display: block;
+  clear: left;
+}
+
+
+editor modal-window widget textarea{
+  width: calc(100% - 2px);
+  margin: 0px;
+  padding: 0px;
+  border: 1px #000 solid;
+}
+
+editor modal-window widget input[type="text"]{
+  font-size: 1em;
+  border: 0px;
+  width: 100%;
+}
+
+
+
+/* カスタムスタイル
+============================================== */
+
+editor button:hover{
+  border-bottom: 2px #2196F3 solid;
+}
